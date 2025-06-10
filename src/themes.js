@@ -1,4 +1,4 @@
-export const theme = {
+export const themes = {
   dark: {
     bg: "bg-slate-950",
     surface: "bg-gray-900",

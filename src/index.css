@@ -1,1 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 @import "tailwindcss";
+.menu__icon span:nth-child(1) {
+  animation: ease 0.8s menu-icon-top-2 forwards;
+}
+
+.menu__icon span:nth-child(2) {
+  animation: ease 0.8s menu-icon-scaled-2 forwards;
+}
+
+.menu__icon span:nth-child(3) {
+  animation: ease 0.8s menu-icon-bottom-2 forwards;
+}
+
+.menu__icon_after_click span:nth-child(1) {
+  animation: ease 0.8s menu-icon-top forwards;
+  top: 0.5rem;
+  transform: rotate(45deg);
+}
+
+.menu__icon_after_click span:nth-child(2) {
+  animation: ease 0.8s menu-icon-scaled forwards;
+  transform: scale(0);
+}
+
+.menu__icon_after_click span:nth-child(3) {
+  animation: ease 0.8s menu-icon-bottom forwards;
+  bottom: 0.5rem;
+  transform: rotate(135deg);
+}
+.hidden_menu {
+  opacity: 0;
+  transition: opacity 0.3s ease-out, max-height 0.3s ease-out;
+}
+.expanded_menu {
+  opacity: 1;
+  transition: opacity 0.3s ease-in, max-height 0.5s ease-in;
+}
+.menu_item_hidden {
+  opacity: 0;
+  transform: translateY(-10px); /* Počinje malo iznad */
+  transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+}
+
+.menu_item_visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.3s ease-in, transform 0.3s ease-in;
+}
+@keyframes menu-icon-top {
+  0% {
+    top: 0;
+    transform: rotate(0);
+  }
+  50% {
+    top: 0.5rem;
+    transform: rotate(0);
+  }
+  100% {
+    top: 0.5rem;
+    transform: rotate(45deg);
+  }
+}
+
+@keyframes menu-icon-top-2 {
+  0% {
+    top: 0.5rem;
+    transform: rotate(45deg);
+  }
+  50% {
+    top: 0.5rem;
+    transform: rotate(0);
+  }
+  100% {
+    top: 0;
+    transform: rotate(0);
+  }
+}
+
+@keyframes menu-icon-bottom {
+  0% {
+    bottom: 0;
+    transform: rotate(0);
+  }
+  50% {
+    bottom: 0.5rem;
+    transform: rotate(0);
+  }
+  100% {
+    bottom: 0.5rem;
+    transform: rotate(135deg);
+  }
+}
+
+@keyframes menu-icon-bottom-2 {
+  0% {
+    bottom: 0.5rem;
+    transform: rotate(135deg);
+  }
+  50% {
+    bottom: 0.5rem;
+    transform: rotate(0);
+  }
+  100% {
+    bottom: 0;
+    transform: rotate(0);
+  }
+}
+
+@keyframes menu-icon-scaled {
+  50% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+
+@keyframes menu-icon-scaled-2 {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
