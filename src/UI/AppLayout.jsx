@@ -17,9 +17,10 @@ function AppLayout() {
 
       <NavBar />
 
-      <div className="md:overflow-y-scroll md:overflow-hidden w-screen bg-slate-900">
+      <div className="md:overflow-y-scroll md:overflow-hidden items-center h-screen w-screen bg-slate-900">
         <main className="w-full">
           <Outlet />
+          <Loader />
         </main>
       </div>
 
