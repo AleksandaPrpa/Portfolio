@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { CgGitFork } from "react-icons/cg";
 import {
@@ -13,22 +13,12 @@ import ChangeThemeBtn, { theme } from "./ChangeThemeBtn";
 
 function NavBar() {
   const [expanded, setExpanded] = useState(false);
-  const [navColour, setNavColour] = useState(false);
   const width = useWindowWidth();
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setNavColour(window.scrollY >= 20);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
   return (
     <nav
-      className={`fixed top-0 w-full z-50 transition-colors duration-300 ease-in-out text-xl${
-        navColour ? `${theme.surface} shadow-md` : "bg-transparent"
-      }`}
+      className={`fixed top-0 w-full z-50 transition-colors duration-300 ease-in-out text-xl ${theme.bg} ${theme.shadow}
+      `}
     >
       {/* Top nav bar */}
       <div
@@ -54,66 +44,68 @@ function NavBar() {
               expanded ? "expanded_menu" : "hidden_menu"
             }`}
           >
-            <ul className="flex flex-col items-center w-screen px-4 md:p-0 rounded-md  shadow-lg ">
-              {[
-                { id: 1, to: "/", icon: <AiOutlineHome />, label: "Home" },
-                {
-                  id: 2,
-                  to: "/about",
-                  icon: <AiOutlineUser />,
-                  label: "About",
-                },
-                {
-                  id: 3,
-                  to: "/projects",
-                  icon: <AiOutlineFundProjectionScreen />,
-                  label: "Projects",
-                },
-              ].map(({ to, icon, label, id }) => (
+            {expanded && (
+              <ul className="flex flex-col items-center w-screen px-4 md:p-0 rounded-md  shadow-lg ">
+                {[
+                  { id: 1, to: "/", icon: <AiOutlineHome />, label: "Home" },
+                  {
+                    id: 2,
+                    to: "/about",
+                    icon: <AiOutlineUser />,
+                    label: "About",
+                  },
+                  {
+                    id: 3,
+                    to: "/projects",
+                    icon: <AiOutlineFundProjectionScreen />,
+                    label: "Projects",
+                  },
+                ].map(({ to, icon, label, id }) => (
+                  <li
+                    key={label}
+                    className={`${
+                      expanded ? "menu_item_visible " : "menu_item_hidden"
+                    } w-screen md:w-auto text-center`}
+                  >
+                    <Link
+                      to={to}
+                      onClick={() => setExpanded(false)}
+                      className={`flex items-center justify-center py-3 gap-1 transition-colors duration-200 border-b-1 ${
+                        theme.border_color
+                      } ${
+                        localStorage.getItem("theme") === "dark"
+                          ? "hover:text-teal-400"
+                          : "hover:text-teal-700"
+                      } ${id % 2 === 0 ? theme.bg : theme.bg_sec}`}
+                    >
+                      {icon} {label}
+                    </Link>
+                  </li>
+                ))}
+
                 <li
-                  key={label}
                   className={`${
-                    expanded ? "menu_item_visible " : "menu_item_hidden"
-                  } w-screen md:w-auto text-center`}
+                    theme.bg
+                  } w-screen md:w-auto text-center flex items-center justify-center py-3 transition-colors duration-200 border-b-1 ${
+                    theme.border_color
+                  } ${expanded ? "menu_item_visible " : "menu_item_hidden"}`}
                 >
-                  <Link
-                    to={to}
-                    onClick={() => setExpanded(false)}
-                    className={`flex items-center justify-center py-3 gap-1 transition-colors duration-200 border-b-1 ${
-                      theme.border_color
-                    } ${
+                  <a
+                    href="https://github.com/AleksandaPrpa"
+                    target="_blank"
+                    rel="noreferrer"
+                    className={`inline-flex items-center justify-center gap-1 px-3 py-1 border rounded-full transition-colors duration-200  ${
                       localStorage.getItem("theme") === "dark"
                         ? "hover:text-teal-400"
                         : "hover:text-teal-700"
-                    } ${id % 2 === 0 ? theme.bg : theme.bg_sec}`}
+                    } ${theme.bg}`}
                   >
-                    {icon} {label}
-                  </Link>
+                    <CgGitFork />
+                    <AiFillStar />
+                  </a>
                 </li>
-              ))}
-
-              <li
-                className={`${
-                  theme.bg
-                } w-screen md:w-auto text-center flex items-center justify-center py-3 transition-colors duration-200 border-b-1 ${
-                  theme.border_color
-                } ${expanded ? "menu_item_visible " : "menu_item_hidden"}`}
-              >
-                <a
-                  href="https://github.com/AleksandaPrpa"
-                  target="_blank"
-                  rel="noreferrer"
-                  className={`inline-flex items-center justify-center gap-1 px-3 py-1 border rounded-full transition-colors duration-200  ${
-                    localStorage.getItem("theme") === "dark"
-                      ? "hover:text-teal-400"
-                      : "hover:text-teal-700"
-                  } ${theme.bg}`}
-                >
-                  <CgGitFork />
-                  <AiFillStar />
-                </a>
-              </li>
-            </ul>
+              </ul>
+            )}
           </div>
         ) : (
           <div>

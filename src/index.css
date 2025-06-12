@@ -39,7 +39,7 @@
 }
 .menu_item_hidden {
   opacity: 0;
-  transform: translateY(-10px); /* Počinje malo iznad */
+  transform: translateY(-10px);
   transition: opacity 0.3s ease-out, transform 0.3s ease-out;
 }
 
@@ -253,5 +253,37 @@
     height: 24px;
     margin-top: 32px;
     margin-left: 0px;
+  }
+}
+.wave_hand {
+  display: inline-block;
+  animation: wave 2s infinite;
+  transform-origin: 70% 70%;
+}
+
+@keyframes wave {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(14deg);
+  }
+  20% {
+    transform: rotate(-8deg);
+  }
+  30% {
+    transform: rotate(14deg);
+  }
+  40% {
+    transform: rotate(-4deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  60% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(0deg);
   }
 }

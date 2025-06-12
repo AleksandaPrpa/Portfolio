@@ -2,6 +2,8 @@ export const themes = {
   dark: {
     bg: "bg-slate-950",
     bg_sec: "bg-slate-900",
+    bg_transition: "bg-gradient-to-b from-slate-950 to-slate-900",
+    shadow: "shadow-[0_1px_2px_rgba(255,255,255,0.1)]",
     surface: "bg-gray-900",
     heading: "text-sky-400",
     accent: "text-teal-400",
@@ -13,6 +15,8 @@ export const themes = {
   light: {
     bg: "bg-slate-200",
     bg_sec: "bg-slate-300",
+    bg_transition: "bg-gradient-to-b from-slate-200 to-slate-300",
+    shadow: "shadow-[0_1px_2px_rgba(30,41,59,0.15)]",
     surface: "bg-gray-300",
     heading: "text-indigo-800",
     accent: "text-teal-700",
