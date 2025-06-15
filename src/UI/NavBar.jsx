@@ -27,8 +27,11 @@ function NavBar() {
         } justify-between items-center px-4 py-3 md:px-8`}
       >
         <div className="flex flex-rows justify-between w-screen align-middles justify-items-center h-auto p-2">
-          <Link to="/" className="text-white font-bold text-2xl p-2 w-1/2">
-            AP
+          <Link
+            to="/"
+            className={`text-white font-bold text-2xl p-2 w-1/2 cursor-default`}
+          >
+            <p className={`hover:${theme.accent} cursor-pointer w-10`}>AP</p>
           </Link>
           {width < 768 && (
             <div className="flex flex-row pr-2 justify-end gap-4 w-2/4">

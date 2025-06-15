@@ -2,26 +2,32 @@ import ChangeThemeBtn, { theme } from "../UI/ChangeThemeBtn";
 import Type from "../UI/Type";
 import coding from "../Assets/coding3.svg";
 import Strong from "../UI/Strong";
+
 function Home1() {
   return (
     <div
-      className={`md:p-60 md:pt-80 pt-35 px-8 flex md:flex-row flex-col gap-20 md:gap-0 ${theme.bg}`}
+      className={`min-h-screen flex flex-col md:flex-row items-center justify-center gap-12 px-6 md:px-12 lg:px-32 pt-20 md:pt-40 ${theme.bg} ${theme.text}`}
     >
-      <div
-        className={`flex flex-col md:w-2/3 gap-8 md:text-4xl text-3xl ${theme.text}`}
-      >
-        <h1>
+      {/* TEXT BLOK */}
+      <div className="flex flex-col gap-6 text-center md:text-left md:w-1/2">
+        <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold">
           Hi There! <span className="wave_hand">👋🏻</span>
         </h1>
-        <h1 className="md:text-5xl text-4xl">
+        <h1 className="text-3xl md:text-5xl font-bold">
           I'M <Strong>ALEKSANDAR PRPA</Strong>
         </h1>
-        <div className={`py-5 md:text-4xl text-3xl h-7 ${theme.accent}`}>
+        <div className={`text-2xl md:text-3xl pt-2`}>
           <Type />
         </div>
       </div>
-      <div className="md:w-1/3">
-        <img src={coding} alt="coding" className="md:w-90 md:h-90" />
+
+      {/* SLIKA BLOK */}
+      <div className="md:w-1/2 flex justify-center">
+        <img
+          src={coding}
+          alt="coding"
+          className="w-[80%] max-w-[400px] md:max-w-[500px]"
+        />
       </div>
     </div>
   );

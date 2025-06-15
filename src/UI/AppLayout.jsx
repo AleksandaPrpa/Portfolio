@@ -8,6 +8,7 @@ function AppLayout() {
   const navigation = useNavigation();
   const isLoading = navigation.state === "loading";
   if (!theme) localStorage.setItem("theme", "dark");
+
   return (
     <div
       className={`${theme.bg} ${theme.text} grid h-screen grid-rows-[auto_1fr_auto] overflow-x-hidden`}
@@ -16,13 +17,9 @@ function AppLayout() {
 
       <NavBar />
 
-      <div
-        className={`md:overflow-y-scroll md:overflow-hidden items-center h-screen w-screen bg-transparent`}
-      >
-        <main className="w-full">
-          <Outlet />
-        </main>
-      </div>
+      <main className="w-full">
+        <Outlet />
+      </main>
 
       <Footer />
     </div>

@@ -6,11 +6,11 @@ import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 function Home2() {
   return (
     <div
-      className={`min-h-screen ${theme.bg_transition} md:px-60 md:pt-15 flex flex-col ${theme.text} border-t-1 ${theme.border_color} pt-3`}
+      className={`min-h-screen ${theme.bg_transition} px-6 md:px-12 lg:px-32 py-8 flex flex-col ${theme.text} border-t ${theme.border_color}`}
     >
-      <div className="flex md:flex-row flex-col md:gap-20">
-        <div className="md:w-2/3 w-screen p-4 flex flex-col gap-6 md:gap-10 text-xl  md:text-xl">
-          <h1 className="text-center text-5xl md:text-6xl">
+      <div className="flex flex-col lg:flex-row items-center gap-12">
+        <div className="w-full lg:w-2/3 flex flex-col gap-6 text-lg lg:text-xl">
+          <h1 className="text-center lg:text-left text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
             LET ME <Strong>INTRODUCE</Strong> MYSELF
           </h1>
           <p>
@@ -29,20 +29,28 @@ function Home2() {
           <p>
             Whenever possible, I also apply my passion for developing products
             with <Strong>Node.js</Strong> and{" "}
-            <Strong>Modern Javascript Library and Frameworks</Strong> like
-            <Strong>React.js</Strong>
+            <Strong>Modern Javascript Library and Frameworks</Strong> like{" "}
+            <Strong>React.js</Strong>.
           </p>
         </div>
-        <div className="pt-4">
-          <img src={coding} alt="coding" className="md:w-100 md:h-100" />
+
+        <div className="w-full lg:w-1/3 flex justify-center">
+          <img
+            src={coding}
+            alt="coding"
+            className="w-[80%] max-w-[400px] md:max-w-[500px] h-auto"
+          />
         </div>
       </div>
-      <div className="flex flex-col items-center p-5 gap-5">
-        <h1 className="text-3xl">
+
+      <div className="flex flex-col items-center p-5 gap-4 mt-14">
+        <h2 className="text-2xl md:text-3xl text-center">
           <Strong>FIND ME ON</Strong>
-        </h1>
-        <p className="text-xl">Feel free to connect with me</p>
-        <div className="flex gap-4 items-center">
+        </h2>
+        <p className="text-lg md:text-xl text-center">
+          Feel free to connect with me
+        </p>
+        <div className="flex gap-6 mt-2">
           <a
             href="https://github.com/AleksandaPrpa"
             target="_blank"
