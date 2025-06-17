@@ -1,5 +1,5 @@
 import Strong from "../../UI/Strong";
-import coding from "../../Assets/coding4.svg";
+import coding from "../../Assets/coding2.svg";
 import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { theme } from "../../UI/ChangeThemeBtn";
 

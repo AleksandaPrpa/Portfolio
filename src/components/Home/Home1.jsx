@@ -1,5 +1,5 @@
 import Type from "../../UI/Type";
-import coding from "../../Assets/coding3.svg";
+import coding from "../../Assets/coding1.svg";
 import Strong from "../../UI/Strong";
 import { theme } from "../../UI/ChangeThemeBtn";
 
