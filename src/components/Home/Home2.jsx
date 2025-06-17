@@ -1,12 +1,12 @@
-import ChangeThemeBtn, { theme } from "../UI/ChangeThemeBtn";
-import Strong from "../UI/Strong";
-import coding from "../Assets/coding4.svg";
+import Strong from "../../UI/Strong";
+import coding from "../../Assets/coding4.svg";
 import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { theme } from "../../UI/ChangeThemeBtn";
 
 function Home2() {
   return (
     <div
-      className={`min-h-screen ${theme.bg_transition} px-6 md:px-12 lg:px-32 py-8 flex flex-col ${theme.text} border-t ${theme.border_color}`}
+      className={`min-h-screen ${theme.bg_transition_reverse} px-6 md:px-12 lg:px-32 py-8 flex flex-col ${theme.text} `}
     >
       <div className="flex flex-col lg:flex-row items-center gap-12">
         <div className="w-full lg:w-2/3 flex flex-col gap-6 text-lg lg:text-xl">
