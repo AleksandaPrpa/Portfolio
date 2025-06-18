@@ -4,7 +4,7 @@ import { theme } from "./ChangeThemeBtn";
 
 function Footer() {
   return (
-    <footer className={`${theme.bg} ${theme.text} py-6`}>
+    <footer className={`${theme.bg_footer} ${theme.text} py-6`}>
       <div className=" mx-auto px-4 flex flex-col md:flex-row justify-center text-center gap-5 items-center text-md">
         <p>
           &copy; {new Date().getFullYear()} Aleksandar Prpa. All rights
