@@ -42,7 +42,6 @@ function KnowWhoIAm() {
         </div>
       </div>
 
-      {/* Slika sekcija */}
       <div className="w-full md:w-1/3 flex justify-center">
         <img
           src={coding}
