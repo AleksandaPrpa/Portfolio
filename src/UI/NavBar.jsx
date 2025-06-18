@@ -20,7 +20,6 @@ function NavBar() {
       className={`fixed top-0 w-full z-50 transition-colors duration-300 ease-in-out text-xl ${theme.bg} ${theme.shadow}
       `}
     >
-      {/* Top nav bar */}
       <div
         className={`flex ${
           width < 768 ? "h-auto flex-col" : "flex-row"

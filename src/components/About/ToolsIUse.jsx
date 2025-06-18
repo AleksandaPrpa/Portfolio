@@ -18,7 +18,7 @@ function ToolsIUse() {
       <h1 className="text-center text-4xl mb-10">
         <Strong>Tools</Strong> I use
       </h1>
-      <div className="flex flex-wrap justify-center w-1/2 gap-8 px-4">
+      <div className="flex flex-wrap justify-center  md:w-screen lg:w-3/4 xl:w-1/2 w-screen gap-10 md:gap-8 px-4">
         {editors.map((editor) => (
           <div
             key={editor.name}
