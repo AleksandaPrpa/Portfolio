@@ -11,7 +11,7 @@ export const themes = {
     text: "text-gray-100",
     quote: "text-teal-300",
     muted: "text-gray-400",
-    button: "bg-sky-500 hover:bg-sky-600 text-white",
+    button: "bg-teal-500 hover:bg-teal-600 text-gray-100",
     border_color: "border-teal-400",
   },
   light: {
@@ -26,7 +26,7 @@ export const themes = {
     text: "text-gray-800",
     quote: "text-teal-600",
     muted: "text-gray-600",
-    button: "bg-indigo-700 hover:bg-indigo-800 text-white",
+    button: "bg-teal-600 hover:bg-teal-600 text-gray-100",
     border_color: "border-teal-700",
   },
 };

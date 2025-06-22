@@ -1,14 +1,59 @@
 import ProjectCard from "./Projectcard";
-
+import { theme } from "../../UI/ChangeThemeBtn";
+import PartyHunt from "../../Assets/Projects/partyhunt.png";
 function Fullstack() {
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+    <div
+      className={`py-30 md:p-40  flex flex-wrap md:flex-row flex-col justify-evenly md:gap-10 gap-4 w-screen ${theme.bg_transition} ${theme.text}`}
+    >
       <ProjectCard
         title="Party Hunt"
-        imgPath="/Assets/partyhunt.png"
+        imgPath=""
         description="A party discovery app with real-time location and event sharing."
         ghLink="https://github.com/AleksandaPrpa/PartyHunt"
-      />
+      >
+        <img src={PartyHunt} />
+      </ProjectCard>
+      <ProjectCard
+        title="Party Hunt"
+        imgPath=""
+        description="A party discovery app with real-time location and event sharing."
+        ghLink="https://github.com/AleksandaPrpa/PartyHunt"
+      >
+        <img src={PartyHunt} />
+      </ProjectCard>
+      <ProjectCard
+        title="Party Hunt"
+        imgPath=""
+        description="A party discovery app with real-time location and event sharing."
+        ghLink="https://github.com/AleksandaPrpa/PartyHunt"
+      >
+        <img src={PartyHunt} />
+      </ProjectCard>
+      <ProjectCard
+        title="Party Hunt"
+        imgPath=""
+        description="A party discovery app with real-time location and event sharing."
+        ghLink="https://github.com/AleksandaPrpa/PartyHunt"
+      >
+        <img src={PartyHunt} />
+      </ProjectCard>
+      <ProjectCard
+        title="Party Hunt"
+        imgPath=""
+        description="A party discovery app with real-time location and event sharing."
+        ghLink="https://github.com/AleksandaPrpa/PartyHunt"
+      >
+        <img src={PartyHunt} />
+      </ProjectCard>
+      <ProjectCard
+        title="Party Hunt"
+        imgPath=""
+        description="A party discovery app with real-time location and event sharing."
+        ghLink="https://github.com/AleksandaPrpa/PartyHunt"
+      >
+        <img src={PartyHunt} />
+      </ProjectCard>
     </div>
   );
 }
