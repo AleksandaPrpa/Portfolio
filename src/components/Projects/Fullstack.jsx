@@ -1,6 +1,7 @@
 import ProjectCard from "./Projectcard";
 import { theme } from "../../UI/ChangeThemeBtn";
 import PartyHunt from "../../Assets/Projects/partyhunt.png";
+import Loader from "../../UI/Loader";
 function Fullstack() {
   return (
     <div
